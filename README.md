@@ -1,4 +1,4 @@
-# Freewrite Mobile
+# FREEWRITE Mobile
 
 A simple, distraction-free writing app for iOS and Android. This is a mobile version of the [Freewrite](https://freewrite.io/) Mac app.
 
@@ -28,8 +28,8 @@ A simple, distraction-free writing app for iOS and Android. This is a mobile ver
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/freewrite-mobile.git
-cd freewrite-mobile
+git clone https://github.com/AVAHC4/FREEWRITE.git
+cd FREEWRITE
 ```
 
 2. Install dependencies:
@@ -63,8 +63,8 @@ This app is built using:
 
 ## License
 
-[License information will be added here]
+MIT License
 
 ## Credits
 
-Original Mac app: [Freewrite](https://freewrite.io/) 
+Original Mac app: [Freewrite](https://freewrite.io/)
