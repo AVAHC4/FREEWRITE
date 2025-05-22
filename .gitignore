@@ -35,3 +35,13 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# iOS
+ios/build/
+ios/Pods/
+
+# Cache files
+.cache/
+
+# Environment variables
+.env*
