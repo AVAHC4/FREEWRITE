@@ -4,7 +4,7 @@ A simple, distraction-free writing app for iOS and Android. This is a mobile ver
 
 ## Features
 
-- **Distraction-free writing**: Focus on your thoughts without distractions
+- **Distraction-free writing**: Focus on your thoughts withut distractions
 - **Timer**: Set a 15-minute timer to keep your writing sessions focused
 - **Dark/Light mode**: Choose your preferred theme for comfortable writing
 - **History view**: Access all your previous writing sessions
