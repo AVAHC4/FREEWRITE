@@ -71,7 +71,7 @@ export default function App() {
     'Georgia',
     'Verdana',
     'Helvetica',
-    'Courier',
+    Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     'Palatino'
   ];
   
@@ -414,6 +414,9 @@ export default function App() {
     if (fontValue === 'Lato-Regular') return 'Lato';
     if (fontValue === 'serif') return 'Serif';
     if (fontValue === 'Times New Roman') return 'Serif';
+    if (fontValue === 'Courier') return 'Courier';
+    if (fontValue === 'Courier New') return 'Courier';
+    if (fontValue === 'monospace') return 'Courier';
     
     return fontValue;
   };
@@ -625,6 +628,10 @@ export default function App() {
     if (selectedFont === 'serif') {
       // Return a specific serif font based on platform to avoid the warning
       return Platform.OS === 'ios' ? 'Times New Roman' : 'serif';
+    }
+    if (selectedFont === 'Courier') {
+      // Return a specific monospace font based on platform to avoid the warning
+      return Platform.OS === 'ios' ? 'Courier New' : 'monospace';
     }
     return selectedFont;
   };
