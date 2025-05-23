@@ -58,7 +58,7 @@ export default function App() {
     { name: 'Lato', value: 'Lato-Regular' },
     { name: 'Arial', value: 'Arial' },
     { name: 'System', value: 'System' },
-    { name: 'Serif', value: 'serif' },
+    { name: 'Serif', value: Platform.OS === 'ios' ? 'Times New Roman' : 'serif' },
     { name: 'Random', value: 'random' }
   ];
   
@@ -67,7 +67,7 @@ export default function App() {
     'Lato-Regular', 
     'Arial',
     'System',
-    'serif',
+    Platform.OS === 'ios' ? 'Times New Roman' : 'serif',
     'Georgia',
     'Verdana',
     'Helvetica',
@@ -412,7 +412,8 @@ export default function App() {
   const getDisplayFontName = (fontValue: string) => {
     if (fontValue === 'System') return Platform.OS === 'ios' ? 'San Francisco' : 'Roboto';
     if (fontValue === 'Lato-Regular') return 'Lato';
-    if (fontValue === 'serif' && Platform.OS === 'ios') return 'Times New Roman';
+    if (fontValue === 'serif') return 'Serif';
+    if (fontValue === 'Times New Roman') return 'Serif';
     
     return fontValue;
   };
@@ -620,6 +621,10 @@ export default function App() {
   const getFontFamily = () => {
     if (selectedFont === 'System') {
       return undefined; // Let the system default be used
+    }
+    if (selectedFont === 'serif') {
+      // Return a specific serif font based on platform to avoid the warning
+      return Platform.OS === 'ios' ? 'Times New Roman' : 'serif';
     }
     return selectedFont;
   };
